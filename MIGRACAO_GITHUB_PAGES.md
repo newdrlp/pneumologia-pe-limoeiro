@@ -1,21 +1,11 @@
-# Roteiro de migração - limoeiro
+# Migração para GitHub Pages
 
-Este repositório replica o padrão validado no piloto saude.
+Este repositório publica a landing da clínica pelo GitHub Pages, branch main, pasta raiz /.
 
-## Modelo
+DNS no Wix:
 
-Um repositório separado por clínica, porque GitHub Pages aceita um único CNAME por site.
+- Tipo: CNAME
+- Host: limoeiro
+- Valor: newdrlp.github.io
 
-## DNS no Wix
-
-| Subdomínio | Tipo | Valor |
-| --- | --- | --- |
-| limoeiro | CNAME | newdrlp.github.io |
-
-## Validação após DNS
-
-1. Abrir http://limoeiro.pneumologia-pe.com.br/ e confirmar Server: GitHub.com.
-2. Aguardar HTTPS/SSL do GitHub Pages.
-3. Abrir https://limoeiro.pneumologia-pe.com.br/.
-4. Abrir https://limoeiro.pneumologia-pe.com.br/pre-atendimento/.
-5. Fazer envio controlado e confirmar chegada no Apps Script/planilha.
+Se o HTTPS ficar preso, remover e adicionar novamente o custom domain em Settings > Pages.
