@@ -851,7 +851,7 @@ body {
     <div class="section-title">Exposições ambientais</div>
     <div class="card">
       <div class="field">
-        <label>Tabagismo próprio</label>
+        <label>Você fuma ou já fumou?</label>
         <p class="hint">Escolha uma opção sobre o seu próprio uso de tabaco.</p>
         <div class="radio-stack" id="tabagismo-status">
           <label class="rb-item"><input type="radio" name="tabagismo_status" id="tab_nunca" value="Nunca fumei"><span>Nunca fumei</span></label>
@@ -1174,7 +1174,7 @@ function montarResumoTabagismo() {
   const calc = calcularCargaTabagica();
   const partes = [];
 
-  if (status) partes.push('Tabagismo próprio: ' + status);
+  if (status) partes.push('Tabagismo: ' + status);
   if (status && status !== 'Nunca fumei') {
     if (tipo) partes.push('Tipo: ' + tipo);
     if (inicio) partes.push('Início: ' + inicio + ' anos');
