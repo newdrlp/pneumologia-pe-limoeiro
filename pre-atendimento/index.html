@@ -443,14 +443,213 @@ body {
   .header h1 { font-size: 21px; }
 }
 
+/* Camada de leitura reforçada para pacientes em celular */
+body {
+  font-size: 17px;
+  line-height: 1.62;
+  background: #eef3ef;
+}
+.header {
+  padding: 30px 22px 26px;
+}
+.clinica-tag {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.28);
+}
+.header h1 {
+  font-size: 28px;
+  line-height: 1.18;
+  margin-bottom: 10px;
+}
+.header-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,.88);
+  max-width: 460px;
+}
+.prog-wrap {
+  height: 4px;
+}
+.wrap {
+  max-width: 620px;
+  padding: 26px 14px 72px;
+}
+.section {
+  margin-bottom: 26px;
+}
+.section-title {
+  font-size: 13px;
+  letter-spacing: 1.4px;
+  color: var(--verde-escuro);
+  margin-bottom: 12px;
+}
+.card {
+  border-radius: 12px;
+  padding: 20px 18px;
+  gap: 18px;
+  box-shadow: 0 2px 12px rgba(19,63,44,.08), 0 0 0 1.5px #d3ded7;
+}
+.field {
+  gap: 8px;
+}
+.field > label {
+  font-size: 16px;
+  font-weight: 800;
+  color: #14231c;
+}
+.field > label .req {
+  color: #b83232;
+  font-weight: 800;
+}
+.field .hint {
+  font-size: 15px;
+  color: #43594e;
+  line-height: 1.48;
+}
+.field input[type=text],
+.field input[type=tel],
+.field input[type=date],
+.field textarea {
+  min-height: 50px;
+  padding: 14px 14px;
+  border: 2px solid #b9c9c0;
+  border-radius: 10px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #111c17;
+}
+.field textarea {
+  min-height: 112px;
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #5f756b;
+  opacity: 1;
+  font-weight: 500;
+}
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--verde);
+  box-shadow: 0 0 0 4px rgba(31,110,74,.16);
+}
+.field-pre {
+  padding: 14px;
+  border-width: 2px;
+}
+.field-pre-label {
+  font-size: 12px;
+  color: var(--verde-escuro);
+}
+.field-pre-val {
+  font-size: 16px;
+  font-weight: 700;
+  white-space: normal;
+}
+.field-pre-lock {
+  font-size: 13px;
+  opacity: .85;
+}
+.cb-grid {
+  gap: 10px;
+}
+.cb-item,
+.rb-item {
+  min-height: 48px;
+  padding: 13px 14px;
+  border: 2px solid #bfcec6;
+  border-radius: 10px;
+  background: #fff;
+}
+.cb-item input[type=checkbox],
+.rb-item input[type=radio] {
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+}
+.cb-item span,
+.rb-item span {
+  font-size: 16px;
+  line-height: 1.35;
+  color: #17261f;
+  font-weight: 600;
+}
+.cb-item:has(input:checked),
+.rb-item:has(input:checked) {
+  border-color: var(--verde);
+  background: #e7f5ed;
+  box-shadow: 0 0 0 3px rgba(31,110,74,.12);
+}
+.btn-submit {
+  min-height: 58px;
+  padding: 17px 18px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 800;
+  background: #17633f;
+  box-shadow: 0 8px 22px rgba(23,99,63,.24);
+}
+.btn-submit:hover {
+  background: #0f4e30;
+}
+.btn-voz {
+  min-height: 44px;
+  font-size: 15px;
+  font-weight: 800;
+}
+.err-msg {
+  font-size: 14px;
+  font-weight: 700;
+}
+.lgpd-note {
+  font-size: 13px;
+  color: #4c6257;
+}
+.cfm-footer {
+  border-width: 2px;
+}
+.cfm-nome {
+  font-size: 17px;
+}
+.cfm-crm,
+.cfm-esp,
+.cfm-rqe {
+  font-size: 14px;
+}
+.sucesso h2 {
+  font-size: 26px;
+}
+.sucesso p {
+  font-size: 17px;
+  color: #2e4037;
+}
+@media (max-width: 430px) {
+  body { font-size: 17px; }
+  .header { padding: 26px 18px 24px; }
+  .header h1 { font-size: 25px; }
+  .header-sub { font-size: 15.5px; }
+  .wrap { padding: 22px 12px 64px; }
+  .card { padding: 18px 14px; }
+  .two { grid-template-columns: 1fr; }
+  .cb-grid { grid-template-columns: 1fr; }
+  .field input[type=text],
+  .field input[type=tel],
+  .field input[type=date],
+  .field textarea {
+    font-size: 18px;
+    min-height: 54px;
+  }
+}
+
 .voz-wrap{position:relative;}
 .btn-voz{
   display:none; /* mostrado via JS apenas se suportado */
   align-items:center;gap:6px;
-  padding:8px 14px;border-radius:8px;
+  min-height:44px;padding:10px 15px;border-radius:10px;
   background:var(--verde-bg);border:1.5px solid var(--verde-border);
   color:var(--verde);font-family:'Source Sans 3',sans-serif;
-  font-size:13px;font-weight:600;cursor:pointer;
+  font-size:15px;font-weight:800;cursor:pointer;
   margin-top:6px;transition:all 0.2s;
 }
 .btn-voz:hover{background:var(--verde-border);}
