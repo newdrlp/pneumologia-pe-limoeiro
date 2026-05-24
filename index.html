@@ -150,9 +150,7 @@ footer strong{color:rgba(255,255,255,0.8);}
     </div>
     <div class="fg"><label>Período preferido</label>
       <div class="rg">
-        <div class="ro" onclick="selectOpt(this,'periodo')">Manhã</div>
-        <div class="ro" onclick="selectOpt(this,'periodo')">Tarde</div>
-        <div class="ro" onclick="selectOpt(this,'periodo')">Indiferente</div>
+        <div class="ro ativo" onclick="selectOpt(this,'periodo')">Manhã</div>
       </div>
     </div>
     <button class="btn-sub" id="btn-sub" onclick="enviar()">
@@ -200,7 +198,7 @@ var PROX_DATA=_prox.toISOString().split("T")[0];
 var _excProx=getProximaExcecao();if(_excProx){TURNO=_excProx.turno;HORARIO=_excProx.horario;}
 
 var TURNO_NOME={"manha":"Manhã","tarde":"Tarde","ambos":"Manhã e tarde"};
-var estado={tipo:null,periodo:null};
+var estado={tipo:null,periodo:"Manhã"};
 function selectOpt(el,campo){el.parentElement.querySelectorAll('.ro').forEach(function(o){o.classList.remove('ativo');});el.classList.add('ativo');estado[campo]=el.textContent.trim();}
 function verificarHorario(){var h=new Date().getHours(),d=new Date().getDay();var av=document.getElementById('aviso');if(av)av.style.display=(d===0||d===6||h<8||h>=18)?'block':'none';}
 function enviar(){
